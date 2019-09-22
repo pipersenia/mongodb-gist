@@ -27,7 +27,10 @@ MongoDB Enterprise m001-shard-0:PRIMARY> show collections;
 movieDetails
 ```
 
-Inserting document into a collection: `insertOne()`
+#### CRUD Operations
+
+#### Create
+- Inserting document into a collection: `insertOne()`
 ```
 MongoDB Enterprise m001-shard-0:PRIMARY> db.moviesScratch.insertOne({title: "Singh is King", year: 1982, imdb: "tt0019284"});
 {
@@ -52,6 +55,7 @@ MongoDB Enterprise m001-shard-0:PRIMARY> db.moviesScratch.insertMany([{title: "S
 }
 ```
 
+#### Read
 Check if the documents were inserted: `find()`
 
 ```
@@ -117,6 +121,8 @@ MongoDB Enterprise m001-shard-0:PRIMARY> db.movieDetails.find({writers: "Ethan C
 { "title" : "Paris, je t'aime" }
 ```
  
+ 
+ #### Update
  Updating: Updating documents <br>
  `updateOne()` 
  - Uses field operators. e.g. `$set`
@@ -141,4 +147,33 @@ In the above example, only a single record was updated.
 
 [Update Operators](https://docs.mongodb.com/manual/reference/operator/update/)
 
-`updateMany()`
+Update many documents at once: `updateMany()`<br>
+```
+MongoDB Enterprise m001-shard-0:PRIMARY> db.movieDetails.updateMany({
+    rated: null
+}, {
+    $unset: {
+        rated: ""
+    }
+})
+```
+In the above example, we first filter the records to be updated by specifying the clause
+and then use the `$unset` operator to update the value of the `rated` field to `""`
+
+- `Upsert` operation. <br>
+Upserts can be accomplished by passing `upsert: "true"` clause.
+
+- `Replace` operation: `replaceOne()` <br>
+Different from update operation which utilizes field set operations to alter the document
+by changing some of the fields.
+Replace operation completely replaces the existing document with a new one.
+
+
+
+ #### Delete
+ 
+ - `deleteOne()`
+ - `deleteMany()`
+ 
+ Works similar to other mongodb operations such as `insert`/`update` by passing 
+ a filter to select the record to be deleted.
