@@ -1,5 +1,7 @@
-#### Awesome MongoDB
+#### Exhaustive resources
 [awesome-mongodb](https://github.com/ramnes/awesome-mongodb)
+
+[Little MongoDB book](https://www.openmymind.net/mongodb.pdf)
 
 Below is list of selected articles which are more controversial and are not covered 
 in the `awesome` list above.

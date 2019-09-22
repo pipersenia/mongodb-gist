@@ -177,3 +177,4 @@ Replace operation completely replaces the existing document with a new one.
  
  Works similar to other mongodb operations such as `insert`/`update` by passing 
  a filter to select the record to be deleted.
+ 
