@@ -20,14 +20,16 @@ MongoDB Gotchas
 - [Jepsen: MongoDB 3.4.0-rc3](https://jepsen.io/analyses/mongodb-3-4-0-rc3)
 - [Jepsen: MongoDB stale reads](https://aphyr.com/posts/322-call-me-maybe-mongodb-stale-reads)
 
-Moving away from MongoDB
+
 [Goodbye Mongo, hello postgres](https://developer.olery.com/blog/goodbye-mongodb-hello-postgresql/)
 - Schemaless can come back to bite you. Can lead to additional code on the application side 
 to handle varying document schema.
 
 [Why you should never, ever, ever use MongoDB](http://cryto.net/~joepie91/blog/2015/07/19/why-you-should-never-ever-ever-use-mongodb/)
+- This article is a handful.
 
 [Which companies have moved away from MongoDB and why? What did they move to?](https://www.quora.com/Which-companies-have-moved-away-from-MongoDB-and-why-What-did-they-move-to/answer/Ga%C3%ABtan-Voyer-Perrault?share=1&srid=uDt8)
 
 [How much credibility does the post "Don't use MongoDB" have?](https://www.quora.com/How-much-credibility-does-the-post-Dont-use-MongoDB-have/answer/Ga%C3%ABtan-Voyer-Perrault?share=1&srid=uDt8)  
 
+[How acid is mongo](https://dzone.com/articles/how-acid-mongodb)
